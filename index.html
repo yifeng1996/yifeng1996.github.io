@@ -1,1 +1,28 @@
-hello github!
+<html>
+ <head>
+  <meta http-equiv=Content-type content="text/html"; charset="UTF-8">
+  <title>JavaScript</title>
+ </head>
+ <body>
+	<form action="02.html" method="post" name="subject">
+		<select name="id" class="selectstyle" onchange="javascript:subject_sub()">
+			<option value="">--=[选择专题]=--</option>
+			<option value="0">生活时尚</option>
+			<option value="1">逆风飞扬</option>
+			<option value="2">linux</option>
+			<option value="3">JavaScript</option>
+			<option value="4">Java</option>
+			<option value="5">英语学习</option>
+		</select>
+	</form>
+	<script language="javascript">
+		function subject_sub(){
+			if(document.subject.id[document.subject.id.selectedIndex].value!=""){
+				alert("changed!");
+				document.subject.submit();
+				return;
+			}
+		}
+	</script>
+ </body>
+</html>
